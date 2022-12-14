@@ -37,7 +37,7 @@ public class UserView {
         frame.setLayout(new FlowLayout());
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
-        JLabel errorMssg1 = new JLabel("No user selected");
+        JLabel errorMssg1 = new JLabel("No user is selected");
         frame.add(errorMssg1);
 
         frame.pack();
