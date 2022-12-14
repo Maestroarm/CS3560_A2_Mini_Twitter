@@ -111,4 +111,16 @@ public class analysis extends JPanel{
         }
         return total;
     }
+
+    private User getLastUpdated(){
+        long currentRecent = 0;
+        User result = null;
+        for(userOrGroup account : root.getGroup()){
+            if(account instanceof User && ((User) account).getLastUpdateTime()>currentRecent){
+                currentRecent = ((User) account).getLastUpdateTime();
+                result = (User) account;
+            }
+        }
+        return (User) result;
+    }
 }

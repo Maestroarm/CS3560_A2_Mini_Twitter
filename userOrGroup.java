@@ -10,4 +10,6 @@ public interface userOrGroup {
     boolean isUser();
     boolean isGroup();
     userOrGroup findUserOrGroup(int id);
+    void setCreationTime(long time);
+    long getCreationTime();
 }

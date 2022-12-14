@@ -111,6 +111,8 @@ public class addUser extends JPanel{
         user = new User(id);
         user.setName(name);
         root.addAccount(user);
+        user.setCreationTime(System.currentTimeMillis());
+        ((User) user).setLastUpdateTime(System.currentTimeMillis());
     }
 
     private void setGroup(String name){
@@ -126,5 +128,7 @@ public class addUser extends JPanel{
         group = new UserGroup(id);
         group.setName(name);
         root.addAccount(group);
+        root.addAccount(group);
+        group.setCreationTime(System.currentTimeMillis());
     }
 }

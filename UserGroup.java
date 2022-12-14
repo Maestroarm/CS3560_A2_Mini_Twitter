@@ -6,6 +6,7 @@ public class UserGroup extends Observable implements userOrGroup {
     private int groupId;
     private String name;
     private ArrayList<userOrGroup> entries;
+    private long creationTime;
 
     public UserGroup(){
         this.entries = new ArrayList<>();
@@ -81,6 +82,16 @@ public class UserGroup extends Observable implements userOrGroup {
     @Override
     public String getName(){
         return name;
+    }
+    
+    @Override
+    public void setCreationTime(long time){
+        this.creationTime = time;
+    }
+
+    @Override
+    public long getCreationTime(){
+        return creationTime;
     }
 
     @Override

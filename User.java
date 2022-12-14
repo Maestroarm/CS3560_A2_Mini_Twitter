@@ -10,6 +10,8 @@ public class User extends Observable implements Observer, userOrGroup {
     private ArrayList<String> newsFeed;
     private ArrayList<String> displayFeed;
     private ArrayList<userOrGroup> followings;
+    private long creationTime;
+    private long lastUpdateTime;
 
     public User(int id){
         this.uniqueID = id;
@@ -61,6 +63,24 @@ public class User extends Observable implements Observer, userOrGroup {
     public userOrGroup findUserOrGroup(int id){
         if(id==this.uniqueID) return this;
         else return null;
+    }
+
+    @Override
+    public void setCreationTime(long time){
+        this.creationTime = time;
+    }
+
+    @Override
+    public long getCreationTime(){
+        return creationTime;
+    }
+
+    public void setLastUpdateTime(long time){
+        this.lastUpdateTime = time;
+    }
+
+    public long getLastUpdateTime(){
+        return lastUpdateTime;
     }
 
     @Override
